@@ -31,3 +31,50 @@
     display: none !important;
     content: none !important;
 }
+
+/* 1. Permanent Text Labels - High Contrast Text */
+.page-navigator ul li a span,
+.page-navigator ul li span {
+    color: #111111 !important;           /* Dark, bold text color */
+    font-weight: 600 !important;          /* Make font bolder for visibility */
+    background: rgba(255, 255, 255, 0.9); /* Subtle light background pill */
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Soft shadow for contrast */
+}
+
+/* 2. Inactive Dots - Solid prominent fill */
+.page-navigator ul li a {
+    background-color: #0056A6 !important; /* Solid dark color (or use your brand color) */
+    border: 2px solid #ffffff !important;  /* White border to stand out on dark areas */
+    opacity: 0.7;                         /* Make them clearly visible */
+    transition: all 0.2s ease;
+}
+
+/* 3. Hovered & Active (Selected Section) Dot */
+.page-navigator ul li.active a,
+.page-navigator ul li a.active,
+.page-navigator ul li a:hover {
+    background-color: #0056b3 !important; /* Vibrant primary brand color (e.g. bright blue) */
+    border-color: #0056b3 !important;
+    opacity: 1 !important;
+    transform: scale(1.25);               /* Enlarge active dot slightly */
+}
+
+/* 1. Increase the size of the dots */
+.page-navigator ul li a {
+    width: 16px !important;       /* Default is ~10px */
+    height: 16px !important;      /* Default is ~10px */
+    border-radius: 50%;           /* Keeps them perfectly round */
+}
+
+/* 2. Adjust vertical spacing between larger dots */
+.page-navigator ul li {
+    margin: 12px 0 !important;    /* Adds extra breathing room between dots */
+}
+
+/* 3. Re-align text labels with the larger dot center */
+.page-navigator ul li a span {
+    top: 50% !important;
+    transform: translateY(-50%) !important; /* Vertically centers text to the dot */
+}
