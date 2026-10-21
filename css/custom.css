@@ -78,3 +78,7 @@
     top: 50% !important;
     transform: translateY(-50%) !important; /* Vertically centers text to the dot */
 }
+
+#special-red-box {
+    border: 3px solid #ff0000 !important;    /* Forces a solid 2px red border */
+}
